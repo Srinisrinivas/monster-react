@@ -10,6 +10,8 @@ before_install:
 
 after_success:
   - docker build -t srinisrinivas/frontend:second .
+  # log into docker hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #push to docker hub
   - docker push srinisrinivas/frontend:second
 # deploy: 
