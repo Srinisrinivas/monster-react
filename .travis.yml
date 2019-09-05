@@ -9,9 +9,9 @@ before_install:
   - docker build -t srinisrinivas/frontend -f Dockerfile .
 
 after_success:
-  - docker build -t pavanpagan/multi-client .
+  - docker build -t srinisrinivas/frontend .
   #push to docker hub
-  - docker push pavanpagan/multi-client
+  - docker push srinisrinivas/frontend
 # deploy: 
 #     provider: elasticbeanstalk
 #     region: "us-east-2"
