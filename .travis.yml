@@ -9,9 +9,9 @@ before_install:
   - docker build -t srinisrinivas/frontend -f Dockerfile .
 
 after_success:
-  - docker build -t srinisrinivas/frontend .
+  - docker build -t srinisrinivas/frontend:second .
   #push to docker hub
-  - docker push srinisrinivas/frontend:first
+  - docker push srinisrinivas/frontend:second
 # deploy: 
 #     provider: elasticbeanstalk
 #     region: "us-east-2"

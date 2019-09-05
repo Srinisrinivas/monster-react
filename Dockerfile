@@ -10,8 +10,8 @@ COPY . .
 
 RUN yarn build
 
-FROM nginx
+# FROM nginx
 
-EXPOSE 80
+# EXPOSE 80
 
-COPY --from=builder /app/build /usr/share/nginx/html
+# COPY --from=builder /app/build /usr/share/nginx/html
